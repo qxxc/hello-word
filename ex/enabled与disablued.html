@@ -1,0 +1,30 @@
+<html>
+<head>
+<link rel="stylesheet" href="exp.css">
+</head>
+<style>
+input[type="text"]:enabled{
+	background-color: blue;
+}
+input[type="text"]:disabled{
+	background-color: green;
+}
+</style>
+<body>
+	<input type="radio" name="radio" id="radio1" onchange="asd()">可用
+	<input type="radio" id="radio2" name="radio" onchange="asd()">不可用
+	<input type="text" id="text1" disabled="">
+</body>
+<script>
+function asd(){
+var a=document.getElementById("radio1");
+var b=document.getElementById("text1");
+if(a.checked){
+	b.disabled="";
+}
+else{
+	b.value="";
+	b.disabled="disabled";
+}}
+</script>
+</html>
